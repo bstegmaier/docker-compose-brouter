@@ -1,0 +1,19 @@
+web:
+    image: bstegmaier/brouter-web
+    ports:
+        - "80:80"
+    volumes:
+        - ./data/profiles:/usr/share/nginx/html/profiles
+app:
+    image: bstegmaier/brouter-app
+    ports:
+        - "17777:17777"
+    volumes:
+        - ./data/profiles:/data/profiles
+        - ./data/segments:/data/segments
+        - ./data/customprofiles:/data/customprofiles
+    environment:
+        #- REQUEST_TIMEOUT=300
+        #- JAVA_OPTS=-Xmx128M -Xms128M -Xmn8M -XX:+PrintCommandLineFlags
+        #- MAX_THREADS=1
+
