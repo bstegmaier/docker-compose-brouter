@@ -24,12 +24,20 @@ This will compose the brouter-app and brouter-web docker images.
 
 ## Usage
 
-* Clone https://github.com/bstegmaier/docker-compose-brouter
+* Clone this repository and change directory
+```
+git clone https://github.com/bstegmaier/docker-compose-brouter.git
+cd docker-compose-brouter
+```
 * Download all necessary files (wget required)
-	./download_profiles.sh
-	./download_country.sh Germany
+```
+  ./download_profiles.sh
+  ./download_country.sh Germany
+```
 * Start the containers
-	docker-compose up
+```
+  docker-compose up
+```
 * Navigate to http://localhost in your browser and enjoy
 
 ### Configuration
